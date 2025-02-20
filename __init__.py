@@ -1,5 +1,5 @@
 from flask import Flask
-from .config import Config  
+from config import Config  
 from app.controllers.user_controller import create_user_controller, get_users_controller  
 from app.models.user import create_user, get_users  
 

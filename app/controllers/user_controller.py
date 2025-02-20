@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from app.models.user import create_user, get_users
+from app.models.user import create_user, get_users #type: ignore
 
 
 def create_user_controller():

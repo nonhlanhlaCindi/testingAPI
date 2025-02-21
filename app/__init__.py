@@ -4,9 +4,8 @@ from app.routes.routes import bp  #type: ignore
 
 def create_app():
     app = Flask(__name__)
-
-    
     from app.routes.routes import bp
-    app.register_blueprint(bp)
+    app.register_blueprint(bp, url_prefix='/api')
 
     return app
+

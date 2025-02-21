@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from app.models.user import create_user, get_users #type: ignore
+from app.models.user import create_user, get_users 
 
 
 def create_user_controller():
@@ -10,9 +10,8 @@ def create_user_controller():
     email = data['email']
     password = data['password']
 
-   
     success = create_user(first_name, last_name, email, password)
-
+    
     if success:
         return jsonify({'message': 'User created successfully'}), 201
     else:
